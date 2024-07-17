@@ -13,7 +13,7 @@ const App = () => {
    const handleDelete = async (id) =>{
     try {
       await
-      axios.delete('http://localhost:8000/api/items${id}/');
+      axios.delete(`http://localhost:8000/api/items/${id}/`);
       setRefresh(!refresh);
     } catch (error){
       console.error('There was an error deleting the items!', error);
